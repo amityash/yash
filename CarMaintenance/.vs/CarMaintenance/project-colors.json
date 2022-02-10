@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "6cd00df7-e2f6-4075-8ba1-dc6c58644f69": {
+      "ProjectGuid": "6cd00df7-e2f6-4075-8ba1-dc6c58644f69",
+      "DisplayName": "CarMaintenance.Api",
+      "ColorIndex": 0
+    },
+    "2f8dc9cf-0dc2-4498-8722-4f76246fbbd7": {
+      "ProjectGuid": "2f8dc9cf-0dc2-4498-8722-4f76246fbbd7",
+      "DisplayName": "CarMaintenance.Business",
+      "ColorIndex": 1
+    },
+    "302fd854-26e1-40fb-8593-86a957c6af45": {
+      "ProjectGuid": "302fd854-26e1-40fb-8593-86a957c6af45",
+      "DisplayName": "CarMaintenance.DataAccess",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
