@@ -12,13 +12,15 @@ namespace CarMaintenance.Business
 
         public bool AddCarToMaintenance(string registartionNumber, List<ShopServices> shopServices)
         {
+            var carDetails = DummyData.GetCars().FirstOrDefault(e => e.RegistrationNumber == registartionNumber);
+            var requests = DummyData.GetMaintenanceRequests();
             throw new NotImplementedException();
         }
 
         public CarModel GetCarDetails(string registrationNumber)
         {
             var carDetails = DummyData.GetCars().FirstOrDefault(e => e.RegistrationNumber == registrationNumber);
-            if(carDetails == null)
+            if (carDetails == null)
             {
                 return new CarModel();
             }
@@ -27,7 +29,13 @@ namespace CarMaintenance.Business
 
         public List<MaintenanceRequestModel> GetMaintenanceRequests()
         {
-            throw new NotImplementedException();
+            var requests = new List<MaintenanceRequestModel>();
+            var maintenaceRequests = DummyData.GetMaintenanceRequests().Where(e => e.Status == (int)MaintenanceStatus.InProgress);
+            foreach (var maintenaceRequest in maintenaceRequests)
+            {
+                requests.Add(MapRequest(maintenaceRequest));
+            }
+            return requests;
         }
 
         public List<ShopServices> GetShopServices()
