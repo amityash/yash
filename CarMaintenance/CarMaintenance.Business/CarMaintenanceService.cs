@@ -18,6 +18,10 @@ namespace CarMaintenance.Business
         public CarModel GetCarDetails(string registrationNumber)
         {
             var carDetails = DummyData.GetCars().FirstOrDefault(e => e.RegistrationNumber == registrationNumber);
+            if(carDetails == null)
+            {
+                return new CarModel();
+            }
             return MapCar(carDetails);
         }
 
@@ -28,7 +32,11 @@ namespace CarMaintenance.Business
 
         public List<ShopServices> GetShopServices()
         {
-            throw new NotImplementedException();
+            List<ShopServices> shopServices = Enum.GetValues(typeof(ShopServices))
+                            .Cast<ShopServices>()
+                            .ToList();
+
+            return shopServices;
         }
 
         private CarModel MapCar(Car car)

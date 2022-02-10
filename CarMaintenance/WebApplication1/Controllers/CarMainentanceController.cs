@@ -15,7 +15,7 @@ namespace CarMaintenance.Api.Controllers
         }
 
         [HttpGet("CarDetails/{registrationNumber}")]
-        public List<CarModel> GetCarDetails(int registrationNumber)
+        public CarModel GetCarDetails(string registrationNumber)
         {
             var carDetails = this.carMaintenanceService.GetCarDetails(registrationNumber);
             return carDetails;
