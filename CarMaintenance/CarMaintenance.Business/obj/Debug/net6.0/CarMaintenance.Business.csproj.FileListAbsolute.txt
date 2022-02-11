@@ -1,0 +1,15 @@
+D:\Yash\CarMaintenance\CarMaintenance.Business\obj\Debug\net6.0\CarMaintenance.Business.csproj.AssemblyReference.cache
+D:\Yash\CarMaintenance\CarMaintenance.Business\obj\Debug\net6.0\CarMaintenance.Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\Yash\CarMaintenance\CarMaintenance.Business\obj\Debug\net6.0\CarMaintenance.Business.AssemblyInfoInputs.cache
+D:\Yash\CarMaintenance\CarMaintenance.Business\obj\Debug\net6.0\CarMaintenance.Business.AssemblyInfo.cs
+D:\Yash\CarMaintenance\CarMaintenance.Business\obj\Debug\net6.0\CarMaintenance.Business.csproj.CoreCompileInputs.cache
+D:\Yash\CarMaintenance\CarMaintenance.Business\bin\Debug\net6.0\CarMaintenance.Business.deps.json
+D:\Yash\CarMaintenance\CarMaintenance.Business\bin\Debug\net6.0\CarMaintenance.Business.dll
+D:\Yash\CarMaintenance\CarMaintenance.Business\bin\Debug\net6.0\ref\CarMaintenance.Business.dll
+D:\Yash\CarMaintenance\CarMaintenance.Business\bin\Debug\net6.0\CarMaintenance.Business.pdb
+D:\Yash\CarMaintenance\CarMaintenance.Business\bin\Debug\net6.0\CarMaintenance.DataAccess.dll
+D:\Yash\CarMaintenance\CarMaintenance.Business\bin\Debug\net6.0\CarMaintenance.DataAccess.pdb
+D:\Yash\CarMaintenance\CarMaintenance.Business\obj\Debug\net6.0\CarMaintenance.Business.csproj.CopyComplete
+D:\Yash\CarMaintenance\CarMaintenance.Business\obj\Debug\net6.0\CarMaintenance.Business.dll
+D:\Yash\CarMaintenance\CarMaintenance.Business\obj\Debug\net6.0\ref\CarMaintenance.Business.dll
+D:\Yash\CarMaintenance\CarMaintenance.Business\obj\Debug\net6.0\CarMaintenance.Business.pdb

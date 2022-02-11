@@ -1,20 +1,56 @@
 ﻿using CarMaintenance.DataAccess;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CarMaintenance.Business
 {
     public class CarMaintenanceService : ICarMaintenanceService
     {
+        public const int maxRequests = 10;
 
-        public bool AddCarToMaintenance(string registartionNumber, List<ShopServices> shopServices)
+        public bool AddCarToMaintenance(string registrationNumber, List<ShopServices> shopServices)
         {
-            var carDetails = DummyData.GetCars().FirstOrDefault(e => e.RegistrationNumber == registartionNumber);
-            var requests = DummyData.GetMaintenanceRequests();
-            throw new NotImplementedException();
+            try
+            {
+
+                var Dbrequests = DummyData.GetMaintenanceRequests();
+                var maxSequence = 0;
+                if (Dbrequests.Any())
+                {
+                    maxSequence = Dbrequests.Select(e => e.SequenceNumber).Max() + 1;
+                }
+
+                var request = new MaintenanceRequest
+                {
+                    RegistartionNumber = registrationNumber,
+                    SelectedService = shopServices.Cast<int>().ToList(),
+                    Status = (int)MaintenanceStatus.InProgress,
+                    SequenceNumber = maxSequence++
+                };
+                Dbrequests.Add(request);
+
+                var totalCars = Dbrequests.Select(e => e.RegistartionNumber).Distinct().Count();
+                if (totalCars > maxRequests)
+                {
+                    var diff = totalCars - maxRequests;
+                    var waitingrequests = Dbrequests.OrderByDescending(e => e.SequenceNumber).Take(diff);
+                    foreach (var waitingRequest in waitingrequests)
+                    {
+                        waitingRequest.Status = (int)MaintenanceStatus.Waiting;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+
+            return true;
+        }
+
+        public List<string> GetAllCar()
+        {
+            var cars = DummyData.GetCars().Select(e => e.RegistrationNumber).ToList();
+            return cars;
         }
 
         public CarModel GetCarDetails(string registrationNumber)
@@ -38,10 +74,9 @@ namespace CarMaintenance.Business
             return requests;
         }
 
-        public List<ShopServices> GetShopServices()
+        public List<string> GetShopServices()
         {
-            List<ShopServices> shopServices = Enum.GetValues(typeof(ShopServices))
-                            .Cast<ShopServices>()
+            List<string> shopServices = Enum.GetNames(typeof(ShopServices))
                             .ToList();
 
             return shopServices;
@@ -49,12 +84,38 @@ namespace CarMaintenance.Business
 
         private CarModel MapCar(Car car)
         {
-            return new CarModel();
+            var carmodel = new CarModel();
+            carmodel.RegistrationNumber = car.RegistrationNumber;
+            carmodel.OwnerName = car.OwnerName;
+            carmodel.Make = car.make;
+            carmodel.Model = car.model;
+            return carmodel;
         }
+
 
         private MaintenanceRequestModel MapRequest(MaintenanceRequest maintenanceRequest)
         {
+            var car = DummyData.GetCars().FirstOrDefault(e => e.RegistrationNumber == maintenanceRequest.RegistartionNumber);
+            if (car != null)
+            {
+                var model = new MaintenanceRequestModel
+                {
+                    Car = MapCar(car),
+                    SelectedServices = maintenanceRequest.SelectedService.Cast<ShopServices>().ToList(),
+                    Status = (MaintenanceStatus)maintenanceRequest.Status,
+
+                };
+                return model;
+            }
             return new MaintenanceRequestModel();
+
+        }
+
+        public bool IsCarAdded(string registrationNumber)
+        {
+            var Dbrequests = DummyData.GetMaintenanceRequests();
+            var registrationNumbers = Dbrequests.Select(e => e.RegistartionNumber).ToList();
+            return registrationNumbers.Contains(registrationNumber) ? true : false;
         }
     }
 }

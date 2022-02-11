@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "CarMaintenance.Business/1.0.0": {
+        "dependencies": {
+          "CarMaintenance.DataAccess": "1.0.0"
+        },
+        "runtime": {
+          "CarMaintenance.Business.dll": {}
+        }
+      },
+      "CarMaintenance.DataAccess/1.0.0": {
+        "runtime": {
+          "CarMaintenance.DataAccess.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CarMaintenance.Business/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CarMaintenance.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

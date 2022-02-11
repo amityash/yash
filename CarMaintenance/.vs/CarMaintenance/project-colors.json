@@ -15,7 +15,17 @@
       "ProjectGuid": "302fd854-26e1-40fb-8593-86a957c6af45",
       "DisplayName": "CarMaintenance.DataAccess",
       "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "ee0318d9-fbe1-4c88-b64d-ba3071596ef3": {
+      "ProjectGuid": "ee0318d9-fbe1-4c88-b64d-ba3071596ef3",
+      "DisplayName": "CarMaintenance.Test",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 4
 }

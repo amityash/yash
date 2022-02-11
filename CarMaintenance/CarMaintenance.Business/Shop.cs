@@ -10,10 +10,10 @@ namespace CarMaintenance.Business
     {
         public Shop()
         {
-            MaintenanceRequests = new List<MaintenanceRequest>();
+            MaintenanceRequests = new List<MaintenanceRequestModel>();
         }
 
-        public List<MaintenanceRequest> MaintenanceRequests { get; set; }
+        public List<MaintenanceRequestModel> MaintenanceRequests { get; set; }
 
         public const int maxRequests = 10;
     }

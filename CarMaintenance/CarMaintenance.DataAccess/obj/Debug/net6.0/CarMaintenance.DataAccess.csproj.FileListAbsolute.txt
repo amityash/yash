@@ -1,0 +1,11 @@
+D:\Yash\CarMaintenance\CarMaintenance.DataAccess\bin\Debug\net6.0\CarMaintenance.DataAccess.deps.json
+D:\Yash\CarMaintenance\CarMaintenance.DataAccess\bin\Debug\net6.0\CarMaintenance.DataAccess.dll
+D:\Yash\CarMaintenance\CarMaintenance.DataAccess\bin\Debug\net6.0\ref\CarMaintenance.DataAccess.dll
+D:\Yash\CarMaintenance\CarMaintenance.DataAccess\bin\Debug\net6.0\CarMaintenance.DataAccess.pdb
+D:\Yash\CarMaintenance\CarMaintenance.DataAccess\obj\Debug\net6.0\CarMaintenance.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\Yash\CarMaintenance\CarMaintenance.DataAccess\obj\Debug\net6.0\CarMaintenance.DataAccess.AssemblyInfoInputs.cache
+D:\Yash\CarMaintenance\CarMaintenance.DataAccess\obj\Debug\net6.0\CarMaintenance.DataAccess.AssemblyInfo.cs
+D:\Yash\CarMaintenance\CarMaintenance.DataAccess\obj\Debug\net6.0\CarMaintenance.DataAccess.csproj.CoreCompileInputs.cache
+D:\Yash\CarMaintenance\CarMaintenance.DataAccess\obj\Debug\net6.0\CarMaintenance.DataAccess.dll
+D:\Yash\CarMaintenance\CarMaintenance.DataAccess\obj\Debug\net6.0\ref\CarMaintenance.DataAccess.dll
+D:\Yash\CarMaintenance\CarMaintenance.DataAccess\obj\Debug\net6.0\CarMaintenance.DataAccess.pdb

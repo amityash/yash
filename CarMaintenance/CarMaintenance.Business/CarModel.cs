@@ -8,7 +8,7 @@ namespace CarMaintenance.Business
 {
     public class CarModel
     {
-        public int RegistrationNumber { get; set; }
+        public string RegistrationNumber { get; set; }
 
         public string OwnerName { get; set; }
 

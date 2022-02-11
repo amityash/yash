@@ -10,10 +10,15 @@ namespace CarMaintenance.Business
     {
         public CarModel GetCarDetails(string registrationNumber);
 
-        public List<ShopServices> GetShopServices();
+        public List<string> GetShopServices();
 
         public bool AddCarToMaintenance(string registartionNumber, List<ShopServices> shopServices);
 
         public List<MaintenanceRequestModel> GetMaintenanceRequests();
+
+        public List<string> GetAllCar();
+
+        bool IsCarAdded(string registrationNumber);
+
     }
 }

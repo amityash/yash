@@ -15,32 +15,50 @@ namespace CarMaintenance.Api.Controllers
         }
 
         [HttpGet("CarDetails/{registrationNumber}")]
-        public CarModel GetCarDetails(string registrationNumber)
+        public IActionResult GetCarDetails(string registrationNumber)
         {
+            if (string.IsNullOrEmpty(registrationNumber))
+            {
+                return BadRequest();
+            }
             var carDetails = this.carMaintenanceService.GetCarDetails(registrationNumber);
-            return carDetails;
+            return Ok(carDetails);
+        }
+
+        [HttpGet("Cars")]
+        public IActionResult Cars()
+        {
+            var carDetails = this.carMaintenanceService.GetAllCar();
+            return Ok(carDetails);
         }
 
         [HttpGet("ShopServices")]
-        public List<ShopServices> GetShopServices()
+        public IActionResult GetShopServices()
         {
             var shopServices = this.carMaintenanceService.GetShopServices();
-            return shopServices;
+            if(shopServices == null)
+            {
+                return NotFound();
+            }
+            return Ok(shopServices);
         }
 
 
-        [HttpGet("CarsInMaintenance")]
-        public List<MaintenanceRequestModel> GetMaintenanceRequests()
+        [HttpGet("GetMaintenanceRequests")]
+        public IActionResult GetMaintenanceRequests()
         {
             var maintenanceRequests = this.carMaintenanceService.GetMaintenanceRequests();
-            return maintenanceRequests;
+            return Ok(maintenanceRequests);
         }
 
         [HttpPost("CarsInMaintenance")]
-        public bool AddCarToMaintenance(string registartionNumber, List<ShopServices> shopServices)
+        public IActionResult AddCarToMaintenance(string registrationNumber, List<ShopServices> shopServices)
         {
-            var isAdded = this.carMaintenanceService.AddCarToMaintenance(registartionNumber, shopServices);
-            return isAdded;
+            var isCarAdded= this.carMaintenanceService.IsCarAdded(registrationNumber);
+            if (isCarAdded)
+                return BadRequest("Car already Added");
+            var isAdded = this.carMaintenanceService.AddCarToMaintenance(registrationNumber, shopServices);
+            return Ok(isAdded);
         }
 
     }

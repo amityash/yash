@@ -11,11 +11,10 @@ namespace CarMaintenance.Business
         public MaintenanceRequestModel()
         {
             Car = new CarModel();
-            SelectedService = new List<ShopServices>();
         }
 
         public CarModel Car { get; set; }
-        public List<ShopServices> SelectedService { get; set; }
+        public List<ShopServices> SelectedServices { get; set; }
         public MaintenanceStatus Status { get; set; }
     }
 }

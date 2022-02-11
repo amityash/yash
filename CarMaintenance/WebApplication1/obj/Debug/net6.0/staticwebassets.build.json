@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "NKSITb/r7FH9tZmD3fIGvl1FU8sVQe3id1mtwdkOmvc=",
+  "Source": "CarMaintenance.Api",
+  "BasePath": "_content/CarMaintenance.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "jb1sIIMT36RhpflmD9ZgTuLvDqhQuJOlRabepQdwJnvIjWCqzm+sg4w8G/kMfd7ypCET+GB7xXyTBgvrQ3u4IA==",
+  "success": true,
+  "projectFilePath": "D:\\Yash\\CarMaintenance\\CarMaintenance.Test\\CarMaintenance.Test.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\asus\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
